@@ -1,22 +1,81 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Italo silva</title>
-    <link rel="stylesheet" href="projects.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio de Projetos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="projects.css">
 </head>
 <body>
-    <header>
-        <h1>Meus projetos</h1>
-    </header>
-    <main>
-        <h2>Projeto 1- Meu portifólio</h2>
-        <p>Nele eu fiz um site utilizando HTML e CSS, que me permitiu mostrar nesse projeto minhas habilidades, conhecimentos, formações e outras informações. </p>
-        <picture>
-            <img src="" alt="">
-        </picture>
-        <p id="portifolio"><a href="https://github.com/ital0silva/Meu-portifolio" target="_blank" rel="external">Clique aqui</a> para ver completo no meu Github</p>
-    </main>
+  <header>
+    <div class="header-container">
+      <h1 id="titulo">Projetos</h1>
+      <div class="search-container">
+        <form action="/search" method="GET">
+          <input type="text" placeholder="Buscar..." name="query">
+          <button type="submit">🔍</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <div class="item" onclick="mostrarInfo('info1')">
+        <img src="imagens/eqripeLBeditada.jpg" alt="Imagem do projeto 1">
+        <h2 class="projeto-titulo">Projeto 1 - Minempresa</h2>
+      </div>
+      <div class="item" onclick="mostrarInfo('info2')">
+        <img src="imagens/porrtifolio.jpg" alt="Imagem do projeto 2">
+        <h2 class="projeto-titulo">Projeto 2 - Portfólio</h2>
+      </div>
+      <div class="item" onclick="mostrarInfo('info3')">
+        <img src="image3.jpg" alt="Imagem do projeto 3">
+        <h2 class="projeto-titulo">Projeto 3</h2>
+      </div>
+    </section>
+
+    <!-- Informações do projeto 1 -->
+    <div id="info1" class="info-projeto" style="display:none;">
+      <h3>Projeto 1 - Minempresa</h3>
+      <div class="carousel">
+        <button class="prev" onclick="mudarSlide(-1, 'carrossel1')">⬅️</button>
+        <img src="imagens/eqripeLBeditada.jpg" alt="Imagem 1" class="carrossel1">
+        <img src="imagens/eqripeLBeditada2.jpg" alt="Imagem 2" class="carrossel1" style="display:none;">
+        <button class="next" onclick="mudarSlide(1, 'carrossel1')">➡️</button>
+      </div>
+      <p>Detalhes sobre o projeto Minempresa...</p>
+      <button onclick="fecharInfo('info1')">Fechar</button>
+    </div>
+
+    <!-- Informações do projeto 2 -->
+    <div id="info2" class="info-projeto" style="display:none;">
+      <h3>Projeto 2 - Portfólio</h3>
+      <div class="carousel">
+        <button class="prev" onclick="mudarSlide(-1, 'carrossel2')">⬅️</button>
+        <img src="imagens/porrtifolio.jpg" alt="Imagem 1" class="carrossel2">
+        <img src="imagens/porrtifolio2.jpg" alt="Imagem 2" class="carrossel2" style="display:none;">
+        <button class="next" onclick="mudarSlide(1, 'carrossel2')">➡️</button>
+      </div>
+      <p>Detalhes sobre o projeto Portfólio...</p>
+      <button onclick="fecharInfo('info2')">Fechar</button>
+    </div>
+
+    <!-- Informações do projeto 3 -->
+    <div id="info3" class="info-projeto" style="display:none;">
+      <h3>Projeto 3</h3>
+      <div class="carousel">
+        <button class="prev" onclick="mudarSlide(-1, 'carrossel3')">⬅️</button>
+        <img src="image3.jpg" alt="Imagem 1" class="carrossel3">
+        <img src="image3-2.jpg" alt="Imagem 2" class="carrossel3" style="display:none;">
+        <button class="next" onclick="mudarSlide(1, 'carrossel3')">➡️</button>
+      </div>
+      <p>Detalhes sobre o projeto 3...</p>
+      <button onclick="fecharInfo('info3')">Fechar</button>
+    </div>
+  </main>
+  
+  <script src="script.js"></script>
 </body>
 </html>

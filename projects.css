@@ -1,26 +1,111 @@
-body{
-    background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(0, 123, 255);
-}
-
-header {
-   
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  #titulo {
+    font-size: 48px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .search-container {
+    margin-right: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button[type="submit"] {
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #005bb5;
+  }
+  
+  .container {
     display: flex;
     justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .item {
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  img {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  img:hover {
+    transform: scale(1.05);
+  }
+  
+  .info-projeto {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: none;
+  }
+  
+  .carousel {
+    display: flex;
     align-items: center;
+  }
+  
+  .carousel img {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: contain; /* Garante que a imagem se ajuste ao espaço sem ser cortada ou distorcida */
 
-}
-main h2{
-    color: white;
-    font-family: 'Times New Roman', Times, serif ;
 
-}
-p{
+  }
+  
+  button.prev, button.next {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  button {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #0072ff;
     color: white;
-    
-}
-#portifolio{
-    
-    
-}
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #005bb5;
+  }
+  
